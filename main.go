@@ -2,36 +2,17 @@ package main
 
 import ( 
 	"fmt"
-	"sort"
 )
 
-func main(){
-	ages := []int {14, 33, 16}
-	fmt.Println(ages)
-	sort.Ints(ages)
-	fmt.Println(ages)
-	index := sort.SearchInts(ages, 1)
-	fmt.Println(index)
-	names := []string{"coraline", "terror", "fabiano"}
-	sort.Strings(names)
-	fmt.Println(names)
-	fmt.Println(sort.SearchStrings(names, "fabiano"))
-x:=3
-for x < 5 {
-fmt.Println(x)
-x++
-}
-for i:=1; i<7;  i++ {
-fmt.Println("segundos ", i)
-}
-for i:=0; i <len(names); i++{
-fmt.Println(names [i])
-}
+func main(){  // Vetores fornecidos
+    ages := []int{16, 14, 43}
+    nomes := []string{"fabiano", "coraline", "terror"}
 
-for index, value := range names {
-	fmt.Println("o indice é ", index,"e o nome é ", value)
-}
-
+    // Loop para associar os índices dos vetores
+    for i := 0; i < len(ages); i++ {
+     // Associa o índice do vetor "ages" com o índice do vetor "nomes"
+        fmt.Printf("Nome: %s, Idade: %d\n", nomes[i], ages[i])
+    }
 }
 	
 
