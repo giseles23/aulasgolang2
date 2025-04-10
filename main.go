@@ -4,15 +4,15 @@ import (
 	"fmt"
 )
 
-func main(){  // Vetores fornecidos
-    ages := []int{16, 14, 43}
-    nomes := []string{"fabiano", "coraline", "terror"}
-
-    // Loop para associar os índices dos vetores
-    for i := 0; i < len(ages); i++ {
-     // Associa o índice do vetor "ages" com o índice do vetor "nomes"
-        fmt.Printf("Nome: %s, Idade: %d\n", nomes[i], ages[i])
-    }
+func main(){ 
+    numeros := [5]int {}
+    fmt.Println("digite 5 números")
+    fmt.Scan(&numeros[0])
+        fmt.Scan(&numeros[1])
+            fmt.Scan(&numeros[2])
+                fmt.Scan(&numeros[3])
+                    fmt.Scan(&numeros[4])
+    fmt.Println("a soma é ", numeros[0]+ numeros[1] + numeros[2] + numeros[3] + numeros[4])
 }
 	
 
