@@ -3,21 +3,23 @@ package main
  import (
     "fmt")
 
-
-func main(){
-    alunoidade := make(map[string]int)
-	alunoidade ["fabiano"] = 16
-	alunoidade ["gisele"] = 18
-	alunoidade ["abobora"] = 3
-	alunoidade ["xerequinha"] = 15
-	fmt.Println("idade da xana", alunoidade["xerequinha"])
-	notasalunos := map[string]float64{
-		"fabiano" : 7.9,
-		"abobora" : 10,
-		"xerequinha" : 3.8,
-		"gisele" : 10,
-	} 
-	for nome, nota := range notasalunos{
-fmt.Printf("%s tirou a nota %.1f\n", nome, nota )
+func analisarNotas()(float64, string){
+	var nota1, nota2 float64
+	fmt.Println("nota 1: ")
+	fmt.Scan(&nota1)
+	fmt.Println("nota 2: ")
+	fmt.Scan(&nota2)
+	var media float64 = (nota1 + nota2)/2
+	if (media>=6){
+		return media, "aprovado"
+	} else if (media<6){
+		return media, "reprovado"
+	} else {
+	return media, "nota invalida"
 	}
+}
+func main(){
+media, resultado := analisarNotas()
+fmt.Printf("média: %.1f \n ", media)
+fmt.Println("resultado:", resultado)
 }
