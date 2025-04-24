@@ -4,15 +4,18 @@ package main
     "fmt")
 
 func main(){
-votos := make(map[string]int)
-votos["ana"]+=1
-votos["marcelo"]+=1
-votos["ana"]+=1
-votos["gisele"]+=1
-votos["ana"]+=1
-votos["marcelo"]+=1
+estoque := make(map[string]int)
+estoque["coxinha"]=10
+estoque["pão de queijo"]=15
+estoque["refrigerante"]=20
 
-for candidato, total := range votos{
-	fmt.Printf("%s recebeu %d votos \n", candidato, total)
+for produtos, quantidade := range estoque {
+	fmt.Printf("%s tem %d unidades sobrando \n", produtos, quantidade)
+}
+fmt.Println("------------------- vendas --------------------")
+estoque["coxinha"]-=2
+estoque["pão de queijo"]-=1
+for produtos, quantidade := range estoque {
+	fmt.Printf("%s agora tem %d unidades sobrando \n", produtos, quantidade)
 }
 }
